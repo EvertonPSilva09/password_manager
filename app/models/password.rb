@@ -6,7 +6,7 @@
 # datetime "updated_at", null: false
 #
 class Password < ApplicationRecord
-  has_many :user_passwords
+  has_many :user_passwords, dependent: :destroy
   has_many :users, through: :user_passwords
 
   encrypts :username, deterministic: true
