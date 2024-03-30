@@ -1,3 +1,5 @@
+<%= link_to "← Home", root_path %>
+
 <%= form_with model: password do |form| %>
   <% if form.object.errors.any? %>
     <% form.object.errors.full_messages.each do |message| %>
@@ -25,7 +27,6 @@
   <div>
     <%= form.submit %>
     <%= button_tag "Delete", form: "delete_password" %>
-    <%= button_to "Home", root_path, method: :get, class: "btn btn-primary" %>
   </div>
 <% end %>
 
