@@ -1,4 +1,4 @@
-<%= link_to "← Home", root_path %>
+<%= link_to "← Home", root_path, class: "block mb-4 no-underline text-s text-blue-500" %>
 
 <%= form_with model: password do |form| %>
   <% if form.object.errors.any? %>
@@ -9,24 +9,24 @@
     <% end %>
   <% end %>
 
-  <div>
+  <div class="mb-4">
     <%= form.label :url %>
     <%= form.url_field :url %>
   </div>
 
-  <div>
+  <div class="mb-4">
     <%= form.label :username %>
     <%= form.text_field :username %>
   </div>
 
-  <div>
+  <div class="mb-4">
     <%= form.label :password %>
     <%= form.text_field :password %>
   </div>
 
   <div>
     <%= form.submit %>
-    <%= button_tag "Delete", form: "delete_password" if form.object.persisted? && current_user_password.deletable? %>
+    <%= button_tag "Delete", name: "delete", form: "delete_password" if form.object.persisted? && current_user_password.deletable? %>
   </div>
 <% end %>
 
