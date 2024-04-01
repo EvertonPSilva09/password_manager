@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
   .btn-primary {
     @apply py-2 px-4 bg-blue-200;
   }
-}
 
-*/
+  label {
+    @apply block text-gray-700 text-sm font-bold mb-2;
+  }
+
+  input[type="submit"] {
+    @apply py-2 px-4 bg-green-100 mt-2 hover:cursor-pointer hover:bg-green-200 rounded;
+  }
+
+  button[name="delete"] {
+    @apply py-2 px-4 bg-red-100 mt-2 hover:cursor-pointer hover:bg-red-200 rounded;
+  }
+
+}
