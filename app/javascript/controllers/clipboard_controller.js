@@ -22,4 +22,14 @@ export default class extends Controller {
       }
     );
   }
+// TODO: Add a function to toggle password visibility
+  // togglePasswordVisibility() {
+  //   const passwordField = document.querySelector('#password');
+  //   if (passwordField.type === "password") {
+  //     passwordField.type = "text";
+  //   } else {
+  //     passwordField.type = "password";
+  //   }
+  // }
+  
 }
